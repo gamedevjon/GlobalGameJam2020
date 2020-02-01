@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Fracture : MonoBehaviour
 {
-    private int maxFrames = 85;
-    private int currentFrame;
+    private int _maxFrames = 85;
+    private int _currentFrame;
     private Rigidbody _rigid;
     [SerializeField]
     private List<FracturedCommand> _commands = new List<FracturedCommand>();
@@ -16,11 +16,16 @@ public class Fracture : MonoBehaviour
     {
         CommandManager.onRewind += StartRewind;
         _rigid = GetComponent<Rigidbody>();
+        _rigid.isKinematic = false;
+        _rigid.useGravity = true;
+        _rigid.GetComponent<Collider>().enabled = true;
     }
 
     private void OnDisable()
     {
         CommandManager.onRewind -= StartRewind;
+        _currentFrame = 0;
+        _commands.Clear();
     }
 
     private void StartRewind()
@@ -31,9 +36,9 @@ public class Fracture : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (currentFrame < maxFrames)
+        if (_currentFrame < _maxFrames)
         {
-            currentFrame++;
+            _currentFrame++;
             FracturedCommand newCommand = new FracturedCommand(transform.position, transform.rotation, _rigid);
             _commands.Add(newCommand);
         }   
@@ -47,6 +52,7 @@ public class Fracture : MonoBehaviour
             yield return null;
             _commands[i].Undo();
         }
+
         if (_decoy.activeInHierarchy == false)
         {
             _decoy.SetActive(true);

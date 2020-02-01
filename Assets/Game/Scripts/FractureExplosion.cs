@@ -26,6 +26,10 @@ public class FractureExplosion : MonoBehaviour
 
             _init = false;
         }
-        
+    }
+
+    private void OnDisable()
+    {
+        _init = false;
     }
 }

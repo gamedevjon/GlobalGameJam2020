@@ -3841,6 +3841,7 @@ GameObject:
   - component: {fileID: 1714005067}
   - component: {fileID: 1714005068}
   - component: {fileID: 1714005066}
+  - component: {fileID: 1518541210}
   m_Layer: 0
   m_Name: Decoy
   m_TagString: Untagged
@@ -3848,6 +3849,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1518541210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518541209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad24515c86c28f54fb3c59ad8f43a6ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fractured: {fileID: 1518541301}
 --- !u!1 &1518541211
 GameObject:
   m_ObjectHideFlags: 0

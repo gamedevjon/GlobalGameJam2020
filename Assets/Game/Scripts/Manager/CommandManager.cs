@@ -30,13 +30,18 @@ public class CommandManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Rewind();
+            Repair();
         }
     }
 
-    public void Rewind()
+    public void Repair()
     {
         if (onRewind != null)
             onRewind();
+    }
+
+    public void Break(Decoy decoy)
+    {
+        decoy.Break();
     }
 }

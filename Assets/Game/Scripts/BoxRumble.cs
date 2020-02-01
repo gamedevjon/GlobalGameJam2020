@@ -24,6 +24,11 @@ public class BoxRumble : MonoBehaviour, IMovable
 
     }
 
+    void OnDisable()
+    {
+        Destroy(this);
+    }
+
     // Update is called once per frame
     void Update()
     {
