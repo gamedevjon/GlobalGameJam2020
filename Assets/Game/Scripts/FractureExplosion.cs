@@ -8,20 +8,18 @@ public class FractureExplosion : MonoBehaviour
     Rigidbody[] fragments;
     [SerializeField]
     float _power;
+    [SerializeField]
     bool _init;
     // Start is called before the first frame update
     private void OnEnable()
     {
+        Debug.Log("OnEnable");
         _init = true;
-        CommandManager.onRepair += CommandManager_onRepair;
     }
 
   
 
-    private void CommandManager_onRepair()
-    {
-        //this.transform.position = GameObject.FindObjectOfType<Player>().transform.localPosition;
-    }
+   
 
     private void FixedUpdate()
     {
@@ -39,7 +37,7 @@ public class FractureExplosion : MonoBehaviour
     private void OnDisable()
     {
         _init = false;
-        CommandManager.onRepair -= CommandManager_onRepair;
+       
 
     }
 
