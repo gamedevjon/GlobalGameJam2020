@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BoxRumble : MonoBehaviour
+public class BoxRumble : MonoBehaviour, IMovable
 {
     Rigidbody rb;
     [SerializeField]
@@ -13,6 +13,7 @@ public class BoxRumble : MonoBehaviour
     Image _meter;
     [SerializeField]
     GameObject _boxMeterContainer, _fracturedBox;
+    bool _initialized = false;
    
 
     // Start is called before the first frame update
@@ -26,7 +27,8 @@ public class BoxRumble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
+        #region Only Used For Intro Scene
+        if (Input.anyKeyDown && _initialized == false)
         {
             float randomDir = Random.Range(-1f, 1f);
             Debug.Log("anykeypress");
@@ -37,13 +39,14 @@ public class BoxRumble : MonoBehaviour
             {
                 _boxMeterContainer.SetActive(false);
                 _fracturedBox.SetActive(true);//blow up box
+                _initialized = true;
                 this.gameObject.SetActive(false);
             }
-
-
         }
-        
-      
+
+        #endregion
+
+
 
 
     }

@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private float _jumpHeight = 10.0f;
     private float _gravity = 1.0f;
     private float _yVelocity;
+    [SerializeField]
+    private float _strength = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,11 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        CalculateMovement();
+    }
+
+    void CalculateMovement()
     {
         float h = Input.GetAxis("Horizontal");
 
@@ -35,5 +42,15 @@ public class Player : MonoBehaviour
         velocity.y = _yVelocity;
 
         _controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        var movable = hit.collider.GetComponent<IMovable>();
+        
+        if (movable != null)
+        {
+            hit.collider.GetComponent<Rigidbody>().AddForce(hit.moveDirection * _strength);
+        }
     }
 }
