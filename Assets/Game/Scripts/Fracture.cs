@@ -9,7 +9,8 @@ public class Fracture : MonoBehaviour
     private Rigidbody _rigid;
     [SerializeField]
     private List<FracturedCommand> _commands = new List<FracturedCommand>();
-    private bool _rewinding = false;
+    [SerializeField]
+    private GameObject _decoy;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -45,6 +46,11 @@ public class Fracture : MonoBehaviour
             Debug.Log("Rewinding: " + i);
             yield return null;
             _commands[i].Undo();
+        }
+        if (_decoy.activeInHierarchy == false)
+        {
+            _decoy.SetActive(true);
+            transform.parent.gameObject.SetActive(false);
         }
     }
 }

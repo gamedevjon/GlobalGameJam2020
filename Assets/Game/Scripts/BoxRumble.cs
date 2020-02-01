@@ -12,7 +12,7 @@ public class BoxRumble : MonoBehaviour, IMovable
     [SerializeField]
     Image _meter;
     [SerializeField]
-    GameObject _boxMeterContainer, _fracturedBox;
+    GameObject _boxMeterContainer, _fracturedBox,_player;
     bool _initialized = false;
    
 
@@ -39,7 +39,9 @@ public class BoxRumble : MonoBehaviour, IMovable
             {
                 _boxMeterContainer.SetActive(false);
                 _fracturedBox.SetActive(true);//blow up box
+                Instantiate(_player, transform.position, Quaternion.identity);
                 _initialized = true;
+                rb.freezeRotation = true;
                 this.gameObject.SetActive(false);
             }
         }
