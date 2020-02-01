@@ -33,6 +33,11 @@ public class CommandManager : MonoBehaviour
         {
             Repair();
         }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Break(GameObject.FindObjectOfType<Decoy>());
+        }
     }
 
     public void Repair()

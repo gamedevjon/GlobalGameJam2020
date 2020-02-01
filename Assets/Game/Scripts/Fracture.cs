@@ -39,7 +39,7 @@ public class Fracture : MonoBehaviour
         if (_currentFrame < _maxFrames)
         {
             _currentFrame++;
-            FracturedCommand newCommand = new FracturedCommand(transform.localPosition, transform.rotation, _rigid);
+            FracturedCommand newCommand = new FracturedCommand(transform.position, transform.rotation, _rigid);
             _commands.Add(newCommand);
         }   
     }

@@ -72,7 +72,6 @@ public class Player : MonoBehaviour
         if (movable != null)
         {
             hit.collider.GetComponent<Rigidbody>().AddForce(hit.moveDirection * _strength);
-            CommandManager.Instance.Break(hit.collider.GetComponent<Decoy>());
         }
     }
 }

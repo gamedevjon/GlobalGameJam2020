@@ -20,7 +20,7 @@ public class FractureExplosion : MonoBehaviour
 
     private void CommandManager_onRepair()
     {
-        this.transform.position = GameObject.FindObjectOfType<Player>().transform.localPosition;
+        //this.transform.position = GameObject.FindObjectOfType<Player>().transform.localPosition;
     }
 
     private void FixedUpdate()
