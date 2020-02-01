@@ -32,12 +32,12 @@ public class Player : MonoBehaviour
     }
     private void CommandManager_onRepair()
     {
-        _buildPoint.SetActive(false);
+        _buildPoint.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void CommandManager_onBreak()
     {
-        _buildPoint.SetActive(true);
+        _buildPoint.GetComponent<MeshRenderer>().enabled = true;
     }
 
     // Update is called once per frame

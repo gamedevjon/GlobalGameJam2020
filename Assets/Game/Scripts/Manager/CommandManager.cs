@@ -39,6 +39,8 @@ public class CommandManager : MonoBehaviour
     {
         if (onRepair != null)
             onRepair();
+
+       
     }
 
     public void Break(Decoy decoy)
