@@ -53,10 +53,10 @@ public class Player : MonoBehaviour
         Vector3 direction = new Vector3(h, 0, 0);
         Vector3 velocity = direction * _speed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && _controller.isGrounded == true)
+        /*if (Input.GetKeyDown(KeyCode.Space) && _controller.isGrounded == true)
         {
             _yVelocity = _jumpHeight;
-        }
+        }*/
 
         _yVelocity -= _gravity;
 
