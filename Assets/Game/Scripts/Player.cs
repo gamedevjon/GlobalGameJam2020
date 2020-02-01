@@ -13,10 +13,31 @@ public class Player : MonoBehaviour
     private float _yVelocity;
     [SerializeField]
     private float _strength = 5.0f;
+    [SerializeField]
+    GameObject _buildPoint;
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
+    }
+    private void OnEnable()
+    {
+        CommandManager.onBreak += CommandManager_onBreak;
+        CommandManager.onRepair += CommandManager_onRepair;
+    }
+    private void OnDisable()
+    {
+        CommandManager.onBreak -= CommandManager_onBreak;
+        CommandManager.onRepair -= CommandManager_onRepair;
+    }
+    private void CommandManager_onRepair()
+    {
+        _buildPoint.SetActive(false);
+    }
+
+    private void CommandManager_onBreak()
+    {
+        _buildPoint.SetActive(true);
     }
 
     // Update is called once per frame

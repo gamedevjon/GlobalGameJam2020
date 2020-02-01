@@ -17,7 +17,8 @@ public class CommandManager : MonoBehaviour
         }
     }
 
-    public static event Action onRewind;
+    public static event Action onRepair;
+    public static event Action onBreak;
 
     private bool _isRewinding;
 
@@ -36,12 +37,14 @@ public class CommandManager : MonoBehaviour
 
     public void Repair()
     {
-        if (onRewind != null)
-            onRewind();
+        if (onRepair != null)
+            onRepair();
     }
 
     public void Break(Decoy decoy)
     {
         decoy.Break();
+        if (onBreak != null)
+            onBreak();
     }
 }

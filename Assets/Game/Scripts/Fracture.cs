@@ -14,7 +14,7 @@ public class Fracture : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        CommandManager.onRewind += StartRewind;
+        CommandManager.onRepair += StartRewind;
         _rigid = GetComponent<Rigidbody>();
         _rigid.isKinematic = false;
         _rigid.useGravity = true;
@@ -23,7 +23,7 @@ public class Fracture : MonoBehaviour
 
     private void OnDisable()
     {
-        CommandManager.onRewind -= StartRewind;
+        CommandManager.onRepair -= StartRewind;
         _currentFrame = 0;
         _commands.Clear();
     }
@@ -56,6 +56,7 @@ public class Fracture : MonoBehaviour
         if (_decoy.activeInHierarchy == false)
         {
             _decoy.SetActive(true);
+            _decoy.transform.position = transform.parent.position;
             transform.parent.gameObject.SetActive(false);
         }
     }
