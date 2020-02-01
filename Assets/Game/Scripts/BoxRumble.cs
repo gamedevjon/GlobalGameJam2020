@@ -44,9 +44,11 @@ public class BoxRumble : MonoBehaviour, IMovable
             {
                 _boxMeterContainer.SetActive(false);
                 _fracturedBox.SetActive(true);//blow up box
-                Instantiate(_player, transform.position, Quaternion.identity);
+                Instantiate(_player, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+                Camera.main.transform.parent = GameObject.FindObjectOfType<Player>().transform;
                 _initialized = true;
-                rb.freezeRotation = true;
+               
+
                 this.gameObject.SetActive(false);
             }
         }
