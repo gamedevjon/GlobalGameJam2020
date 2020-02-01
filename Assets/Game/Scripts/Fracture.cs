@@ -30,7 +30,8 @@ public class Fracture : MonoBehaviour
 
     private void StartRewind()
     {
-        StartCoroutine(RewindRoutine());
+        if (this.gameObject.active == true)
+            StartCoroutine(RewindRoutine());
     }
 
     // Update is called once per frame

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1737492520997822060}
   - component: {fileID: 1737492520997822061}
   - component: {fileID: 1737492520997822062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 1737492521098585137}
   - component: {fileID: 1737492521098585138}
   - component: {fileID: 1737492521098585139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 1737492521128154696}
   - component: {fileID: 1737492521128154697}
   - component: {fileID: 1737492521128154698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737492521149085178}
   - component: {fileID: 1737492521149085177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fractured
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,6 +462,7 @@ MonoBehaviour:
   - {fileID: 1737492522200701722}
   - {fileID: 1737492522278883101}
   _power: 5000
+  _init: 0
 --- !u!1 &1737492521462170034
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +486,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737492521462170034}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.68, y: 0.20531413, z: -1.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -508,7 +509,7 @@ GameObject:
   - component: {fileID: 1737492521465850700}
   - component: {fileID: 1737492521465850701}
   - component: {fileID: 1737492521465850702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Decoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +632,7 @@ GameObject:
   - component: {fileID: 1737492521514965227}
   - component: {fileID: 1737492521514965220}
   - component: {fileID: 1737492521514965221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +757,7 @@ GameObject:
   - component: {fileID: 1737492521660017673}
   - component: {fileID: 1737492521660017674}
   - component: {fileID: 1737492521660017675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +882,7 @@ GameObject:
   - component: {fileID: 1737492521681909345}
   - component: {fileID: 1737492521681909346}
   - component: {fileID: 1737492521681909347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1007,7 @@ GameObject:
   - component: {fileID: 1737492521708347206}
   - component: {fileID: 1737492521708347207}
   - component: {fileID: 1737492521708347200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1131,7 +1132,7 @@ GameObject:
   - component: {fileID: 1737492521768497260}
   - component: {fileID: 1737492521768497261}
   - component: {fileID: 1737492521768497262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1257,7 @@ GameObject:
   - component: {fileID: 1737492521832678302}
   - component: {fileID: 1737492521832678303}
   - component: {fileID: 1737492521832678296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1381,7 +1382,7 @@ GameObject:
   - component: {fileID: 1737492521962621630}
   - component: {fileID: 1737492521962621631}
   - component: {fileID: 1737492521962621624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1506,7 +1507,7 @@ GameObject:
   - component: {fileID: 1737492522035354432}
   - component: {fileID: 1737492522035354433}
   - component: {fileID: 1737492522035354434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1632,7 @@ GameObject:
   - component: {fileID: 1737492522139825867}
   - component: {fileID: 1737492522139825860}
   - component: {fileID: 1737492522139825861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart9_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1757,7 @@ GameObject:
   - component: {fileID: 1737492522200701721}
   - component: {fileID: 1737492522200701722}
   - component: {fileID: 1737492522200701723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1881,7 +1882,7 @@ GameObject:
   - component: {fileID: 1737492522278883100}
   - component: {fileID: 1737492522278883101}
   - component: {fileID: 1737492522278883102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2006,7 +2007,7 @@ GameObject:
   - component: {fileID: 1737492522392767625}
   - component: {fileID: 1737492522392767626}
   - component: {fileID: 1737492522392767627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2131,7 +2132,7 @@ GameObject:
   - component: {fileID: 1737492522402426392}
   - component: {fileID: 1737492522402426393}
   - component: {fileID: 1737492522402426394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2257,7 @@ GameObject:
   - component: {fileID: 1737492522410176781}
   - component: {fileID: 1737492522410176782}
   - component: {fileID: 1737492522410176783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2381,7 +2382,7 @@ GameObject:
   - component: {fileID: 1737492522458380312}
   - component: {fileID: 1737492522458380313}
   - component: {fileID: 1737492522458380314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2506,7 +2507,7 @@ GameObject:
   - component: {fileID: 1737492522580085075}
   - component: {fileID: 1737492522580085068}
   - component: {fileID: 1737492522580085069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2631,7 +2632,7 @@ GameObject:
   - component: {fileID: 1737492522679360032}
   - component: {fileID: 1737492522679360033}
   - component: {fileID: 1737492522679360034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2756,7 +2757,7 @@ GameObject:
   - component: {fileID: 1737492522902915419}
   - component: {fileID: 1737492522902915412}
   - component: {fileID: 1737492522902915413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_Cube_001_fracturepart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

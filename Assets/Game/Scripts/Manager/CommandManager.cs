@@ -27,6 +27,17 @@ public class CommandManager : MonoBehaviour
         _instance = this;
     }
 
+    private void Start()
+    {
+        var decoysInScene = GameObject.FindObjectsOfType<Decoy>();
+        foreach(var decoy in decoysInScene)
+        {
+            decoy.Break();
+        }
+
+        Repair();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))

@@ -46,7 +46,8 @@ public class Shoot : MonoBehaviour
 
                 if (decoy != null)
                 {
-                    decoy.Break();
+                    //decoy.Break();
+                    CommandManager.Instance.Break(decoy);
                     Debug.Log("Hit");
                 }
             }

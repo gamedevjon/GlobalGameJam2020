@@ -17,12 +17,14 @@ public class FractureExplosion : MonoBehaviour
         _init = true;
     }
 
+   
   
 
    
 
     private void FixedUpdate()
     {
+
         if (_init == true)
         {
             foreach (var fragment in fragments)

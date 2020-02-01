@@ -13,4 +13,6 @@ public class Decoy : MonoBehaviour, IMovable
         _fractured.transform.position = this.transform.position;
         this.gameObject.SetActive(false);
     }
+
+    
 }
