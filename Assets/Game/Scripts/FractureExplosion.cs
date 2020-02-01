@@ -8,14 +8,24 @@ public class FractureExplosion : MonoBehaviour
     Rigidbody[] fragments;
     [SerializeField]
     float _power;
+    bool _init;
     // Start is called before the first frame update
     private void OnEnable()
     {
-        foreach (var fragment in fragments)
-        {
-            fragment.AddExplosionForce(_power, fragment.transform.position, 1);
-        }
+        _init = true;        
     }
-    
 
+    private void FixedUpdate()
+    {
+        if (_init == true)
+        {
+            foreach (var fragment in fragments)
+            {
+                fragment.AddExplosionForce(_power, fragment.transform.position, 1);
+            }
+
+            _init = false;
+        }
+        
+    }
 }
