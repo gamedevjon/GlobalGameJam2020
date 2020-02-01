@@ -32,7 +32,7 @@ public class BoxRumble : MonoBehaviour
             Debug.Log("anykeypress");
             rb.AddTorque(Vector3.forward * randomDir  * _power, ForceMode.Impulse);
             rb.AddTorque(Vector3.left * randomDir * _power, ForceMode.Impulse);
-            _meter.fillAmount += Time.deltaTime;
+            _meter.fillAmount += Time.deltaTime*3;
             if (_meter.fillAmount > .95f)
             {
                 _boxMeterContainer.SetActive(false);
@@ -43,8 +43,12 @@ public class BoxRumble : MonoBehaviour
 
         }
         
-        _meter.fillAmount -= Time.deltaTime/5;
+      
 
 
+    }
+    private void LateUpdate()
+    {
+        _meter.fillAmount -= Time.deltaTime / 10;
     }
 }
